@@ -1,4 +1,4 @@
-# fixme-microservice-template
+# fixmi-microservice-template
 
 This repo will serve the function of being a template for every microservice of the Fix-Mi application. This will save a lot of time for configuration and consistency.
 
