@@ -127,8 +127,13 @@ npm run start
 
 ## Pushing everything on github 
 
-I created the new repo on github, now we need to create a local repo and push it 
+I created the new repo on github, now we need to create a local repo and push it.
 I also created a README.md file
 ```bash 
-
+git init 
+git add --all
+git commit -m "base project, express + typescript + eslint"
+git branch -M main
+git remote add origin https://github.com/IS-FixMi/fixme-microservice-template.git
+git push -u origin main
 ```
