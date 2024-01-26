@@ -1,6 +1,6 @@
 # fixmi-microservice-template
 
-This repo will serve the function of being a template for every microservice of the Fix-Mi application. This will save a lot of time for configuration and consistency.
+This repository is designed to function as a comprehensive template for each microservice within the Fix-Mi application, streamlining the development process by providing a standardized foundation. By serving as a template, it aims to significantly reduce the time spent on configuration tasks and enhance overall consistency across the various microservices.
 
 Each microservice runs in a docker container, and uses:
 

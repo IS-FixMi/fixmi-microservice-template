@@ -1,4 +1,4 @@
-i/*
+/*
  *   File: index.tsx 
  *
  *   Purpose: this file generates the root react component,
