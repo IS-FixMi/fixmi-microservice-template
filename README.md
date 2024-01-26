@@ -40,7 +40,7 @@ npm run start
 - `src/`: source code 
   - `api/`: backend 
   - `components/`: react's components 
-  `index.tsx`: main react file
+  - `index.tsx`: main react file
 
 A list of all the commands I used to make this template can be found in `commands/` 
 

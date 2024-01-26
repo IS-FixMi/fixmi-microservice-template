@@ -5,8 +5,10 @@
  *
  */ 
 
-mport Axios from "axios"
+import Axios from "axios"
 import React, {useState, useEffect} from "react"
+
+import './style.css'
 
 function App() {
 
@@ -24,10 +26,12 @@ function App() {
   
 
   return (
-    <div className="App">
+    <div className="App text-3xl font-bold underline flex h-screen bg-sky-400">
+      <div class="m-auto">
         <p>
           React says: {res.text}
         </p>
+      </div>
     </div>
   );
 }
