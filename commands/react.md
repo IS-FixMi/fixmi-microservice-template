@@ -38,5 +38,41 @@ And we can change the script inside `package.json` like so:
 
 This will update the browser each time we change the javascript, but we are only working with typescript. We need to install `ts-node` and give the typescript file to nodemon
 ```json 
-"start": "tsc && nodemon src/app.ts",
+"start": "nodemon src/app.ts",
+```
+
+I removed tsc as It's no longer needed
+
+We will need Axios for api calls inside react:
+```bash 
+npm install axios
+```
+
+## Linking front-end and back-end 
+
+To allow both front end and back end to run in the same process we can use concurrently
+```bash 
+npm install concurrently 
+```
+
+Inside `package.json`
+```json 
+  "scripts": {
+    "startfront": "PORT=3002 npx react-scripts start",
+    "startback": "nodemon src/api/app.ts",
+    "start": "concurrently \" npm run startback\" \" npm run startfront\" ",
+    "lint": "eslint . --ext .ts",
+ 
+```
+
+I made a major refactoring, now react is in the same project as the backed
+
+I had to exlude react components from tsc in `tsconfig.json`
+
+```json 
+  "exclude": [
+    "client/*",
+    "src/components/*",
+    "src/index.tsx"
+  ],
 ```

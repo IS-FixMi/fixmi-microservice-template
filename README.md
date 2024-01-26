@@ -21,14 +21,26 @@ Each microservice runs in a docker container, and uses:
 
 To run the backend 
 ```bash 
-npm run start
+npm run startback
 ```
 
 To run the frontend
 ```bash 
-cd client/
-npm start
+npm ru startfront
 ```
+
+Run Both
+```bash 
+npm run start
+```
+
+## Project structure
+
+- `public/`: all static data such as images and fonts
+- `src/`: source code 
+  - `api/`: backend 
+  - `components/`: react's components 
+  `index.tsx`: main react file
 
 A list of all the commands I used to make this template can be found in `commands/` 
 
