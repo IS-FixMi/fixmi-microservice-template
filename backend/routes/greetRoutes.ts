@@ -1,3 +1,11 @@
+/*
+ *   File: greetRoutes.ts 
+ *
+ *   Purpose: this file contains all the routes after
+ *            /api/greet
+ *
+ */ 
+
 import express from 'express' 
 
 // '/api/greet'
