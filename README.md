@@ -26,7 +26,7 @@ npm run startback
 
 To run the frontend
 ```bash 
-npm ru startfront
+npm run startfront
 ```
 
 Run Both
