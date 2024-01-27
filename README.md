@@ -36,9 +36,9 @@ npm run start
 
 ## Project structure
 
+- `backend/`: everything backend
 - `public/`: all static data such as images and fonts
 - `src/`: source code 
-  - `api/`: backend 
   - `components/`: react's components 
   - `index.tsx`: main react file
 
