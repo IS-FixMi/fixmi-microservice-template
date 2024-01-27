@@ -5,7 +5,7 @@
   "main": "src/app.ts",
   "scripts": {
     "startfront": "PORT=3002 npx react-scripts start",
-    "startback": "nodemon backend/app.ts",
+    "startback": "nodemon backend/server.ts",
     "start": "concurrently \" npm run startback\" \" npm run startfront\" ",
     "lint": "eslint . --ext .ts",
     "test": "echo \"Error: no test specified\" && exit 1"

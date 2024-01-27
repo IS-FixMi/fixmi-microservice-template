@@ -7,6 +7,8 @@
 
 // Express
 import express from 'express';
+import greetRouter from './routes/greetRoutes';
+
 const app = express();
 const port = 3001;
 
@@ -17,11 +19,7 @@ app.use(function(req, res, next) {
   next();
   });
 
-// GET route
-app.get('/api/greet', (req, res) => {
-  // Return a json
-  res.json({text: `Hello World from Backend!`});
-});
+app.use("/api/greet", greetRouter);
 
 app.listen(port, () => {
   return console.log(`Express is listening at http://localhost:${port}`);
