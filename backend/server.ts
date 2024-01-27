@@ -13,12 +13,13 @@ const app = express();
 const port = 3001;
 
 // Allow Access from different origin to enable react to make calls 
+/*
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "X-Requested-With");
   next();
   });
-
+*/
 app.use("/api/greet", greetRouter);
 
 app.listen(port, () => {
