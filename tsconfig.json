@@ -8,9 +8,7 @@
     "outDir": "dist",
   },
   "exclude": [
-    "client/*",
-    "src/components/*",
-    "src/index.tsx"
+    "src/*",
   ],
   "lib": ["es2015"]
 }

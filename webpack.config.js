@@ -4,7 +4,7 @@ const path = require("path")
 const typicalReact = {
   rules: [
     {
-      test: /\.js$/,
+      test: /\.(js|jsx)$/,
       exclude: /(node_modules)/,
       use: {
         loader: "babel-loader",
@@ -17,9 +17,9 @@ const typicalReact = {
 }
 
 const clientConfig = {
-  entry: "./client/src/App.tsx",
+  entry: "./src/index.tsx",
   output: {
-    path: path.resolve(__dirname, "client/public"),
+    path: path.resolve(__dirname, "compiled"),
     filename: "main.js"
   },
   mode: "development",
@@ -27,10 +27,10 @@ const clientConfig = {
 }
 
 const serverConfig = {
-  entry: "./src/app.ts",
+  entry: "./src/api/app.ts",
   output: {
     path: __dirname,
-    filename: "server-compiled.js"
+    filename: "compiled/server-compiled.js"
   },
   externals: [nodeExternals()],
   target: "node",
