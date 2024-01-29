@@ -45,6 +45,8 @@ docker logs ae9da2c07d45
 
 ---
 
+## Testing
+
 To run the backend 
 ```bash 
 npm run startback
@@ -69,6 +71,8 @@ npm run start
   - `index.tsx`: main react file
 
 A list of all the commands I used to make this template can be found in `commands/` 
+
+To use a dabatase, look [here](https://github.com/IS-FixMi/fixmi-database-template).
 
 ## TODO
 - [x] Base project + Express
