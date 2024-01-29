@@ -15,13 +15,11 @@ function App() {
   return (
     <BrowserRouter>
       <main>
-        <container>
           <Routes>
             {/* Routing */}
             <Route path="/" element={<Greet />}/>
             <Route path="/test" element={<TestText />}/>
           </Routes>
-        </container>
       </main>
 
     </BrowserRouter>

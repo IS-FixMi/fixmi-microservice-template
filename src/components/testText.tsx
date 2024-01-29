@@ -13,7 +13,7 @@ export default function TestText() {
 
   return (
     <div className="App text-3xl font-bold underline flex h-screen bg-sky-400">
-      <div class="m-auto">
+      <div className="m-auto">
         <p>
           React says: Test component rendered perfectly
         </p>

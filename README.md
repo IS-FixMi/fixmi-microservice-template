@@ -18,6 +18,32 @@ Each microservice runs in a docker container, and uses:
 
 - [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss) for styles
 
+## Docker
+
+To build the docker container run 
+```bash 
+docker build -t example-microservice . 
+```
+
+And then run the container, it will take some time the first time
+```bash 
+docker run -dp 3001:3001 -p 3002:3002 example-microservice
+```
+You can then connect to `localhost:3001` to access the backend and `localhost:3002` to connect to frontend 
+
+Stop the container 
+```bash 
+docker ps 
+docker stop ae9da2c07d45
+```
+
+See logs 
+```bash 
+docker ps 
+docker logs ae9da2c07d45
+```
+
+---
 
 To run the backend 
 ```bash 
@@ -47,6 +73,5 @@ A list of all the commands I used to make this template can be found in `command
 ## TODO
 - [x] Base project + Express
 - [x] Typescript and eslint
-- [ ] Mongodb
 - [x] React 
-- [ ] Docker
+- [x] Docker
