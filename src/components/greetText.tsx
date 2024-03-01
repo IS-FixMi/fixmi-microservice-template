@@ -11,6 +11,9 @@ import React, {useState, useEffect} from "react"
 import { useErrorBoundary } from "react-error-boundary";
 import '../style.css'
 
+// Read variables from .env file
+//require('dotenv').config()
+
 // Add a request interceptor
 Axios.interceptors.request.use(function (config) {
     // Do something before request is sent
@@ -31,43 +34,21 @@ export default function GreetText() {
   // The initial state is an empty list
   const [res, setRes] = useState([])
 
+  //const port = process.env.BACKEND_PORT || 3001;
+
   // Call api
   useEffect(() => {
-      const fetchData = async () => {
-        Axios.get("http://localhost:3001/api/greet")
+     const fetchData = async () => {
+        Axios.get('http://localhost:3001/api/greet')
             .then(
               response => {
               setRes(response.data)
               },
               error => {
-                console.error(error);
                 showBoundary(error)
             })
-         /*
-            .catch(function (error) {
-              if (error.response) {
-                // The request was made and the server responded with a status code
-                // that falls out of the range of 2xx
-                console.log(error.response.data);
-                console.log(error.response.status);
-                console.log(error.response.headers);
-              } else if (error.request) {
-                // The request was made but no response was received
-                // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
-                // http.ClientRequest in node.js
-                console.log(error.request);
-              } else {
-                // Something happened in setting up the request that triggered an Error
-                console.log('Error', error.message)
-              }
-              console.log(error.config)
-              
-              showBoundary(error)
-
-            })*/
-
       }
-
+      
       fetchData()
   }, [])
 

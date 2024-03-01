@@ -18,6 +18,10 @@ Each microservice runs in a docker container, and uses:
 
 - [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss) for styles
 
+- [CORS](https://www.npmjs.com/package/cors) for safe Cross-origin resource sharing via a whitelist
+
+- [Docker](https://github.com/docker) for deployment
+
 ## Docker
 
 To build the docker container run 
@@ -61,6 +65,17 @@ Run Both
 ```bash 
 npm run start
 ```
+---
+
+# Production
+
+To build for Production, run 
+```bash
+npm run buildfront 
+npm run production
+```
+
+---
 
 ## Project structure
 
