@@ -23,7 +23,7 @@ export default function Greet() {
   );
 }
 
-function Fallback({ error }) {
+export function Fallback({ error }) {
     
   // This is important, don't delete it
   console.error(error)

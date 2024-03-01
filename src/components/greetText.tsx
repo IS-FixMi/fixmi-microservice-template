@@ -11,21 +11,6 @@ import React, {useState, useEffect} from "react"
 import { useErrorBoundary } from "react-error-boundary";
 import '../style.css'
 
-// Read variables from .env file
-//require('dotenv').config()
-
-// Add a request interceptor
-Axios.interceptors.request.use(function (config) {
-    // Do something before request is sent
-    return config;
-  }, function (error) {
-    // Do something with request error
-
-    const { showBoundary } = useErrorBoundary()
-    showBoundary(error)
-    return Promise.reject(error);
-  });
-
 export default function GreetText() {
 
   // Use the Error Bundary handling
@@ -34,15 +19,15 @@ export default function GreetText() {
   // The initial state is an empty list
   const [res, setRes] = useState([])
 
-  //const port = process.env.BACKEND_PORT || 3001;
+  const PORT = process.env.REACT_APP_BACKEND_PORT || 3001;
 
   // Call api
   useEffect(() => {
      const fetchData = async () => {
-        Axios.get('http://localhost:3001/api/greet')
+        Axios.get('http://localhost:'.concat(PORT, "/api/greet"))
             .then(
               response => {
-              setRes(response.data)
+                setRes(response.data)
               },
               error => {
                 showBoundary(error)

@@ -22,10 +22,13 @@ Each microservice runs in a docker container, and uses:
 
 - [Docker](https://github.com/docker) for deployment
 
+Environmental variables such as ports are stored in `.env`
+
 ## Docker
 
 To build the docker container run 
 ```bash 
+npm run buildfront 
 docker build -t example-microservice . 
 ```
 
@@ -38,13 +41,13 @@ You can then connect to `localhost:3001` to access the backend and `localhost:30
 Stop the container 
 ```bash 
 docker ps 
-docker stop ae9da2c07d45
+docker stop <CONTAINER_ID>
 ```
 
 See logs 
 ```bash 
 docker ps 
-docker logs ae9da2c07d45
+docker logs <CONTAINER_ID>
 ```
 
 ---
@@ -93,4 +96,7 @@ To use a dabatase, look [here](https://github.com/IS-FixMi/fixmi-database-templa
 - [x] Base project + Express
 - [x] Typescript and eslint
 - [x] React 
+- [x] React error handling
 - [x] Docker
+- [x] CORS
+- [x] Environmental Variables 

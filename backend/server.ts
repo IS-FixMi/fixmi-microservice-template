@@ -15,7 +15,7 @@ import greetRouter from './routes/greetRoutes';
 require('dotenv').config();
 
 const app = express();
-const port = process.env.BACKEND_PORT || 3001;
+const port = process.env.REACT_APP_BACKEND_PORT || 3001;
  
 
 // ------------ SAME ORIGIN POLICY  -------------
