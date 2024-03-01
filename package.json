@@ -4,13 +4,12 @@
   "description": "",
   "main": "src/app.ts",
   "scripts": {
-    "startfront": "PORT=3002 npx react-scripts start",
-    "buildfront": "PORT=3002 npx react-scripts build",
+    "startfront": "PORT=$(cat .env | grep  REACT_APP_FRONTEND_PORT= | cut -d\"=\" -f2) npx react-scripts start",
+    "buildfront": "PORT=$(cat .env | grep  REACT_APP_BACKEND_PORT= | cut -d\"=\" -f2)  npx react-scripts build",
     "startback": "nodemon backend/server.ts",
     "start": "concurrently \" npm run startback\" \" npm run startfront\" ",
     "production": "concurrently \" npm run startback\" \" serve -l 3002 build\" ",
-    "lint": "eslint . --ext .ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint . --ext .ts"
   },
   "proxy": "",
   "keywords": [],
@@ -36,7 +35,6 @@
     "autoprefixer": "^10.4.17",
     "axios": "^1.6.7",
     "concurrently": "^8.2.2",
-    "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "ejs": "^3.1.9",

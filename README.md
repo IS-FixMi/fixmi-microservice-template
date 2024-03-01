@@ -92,6 +92,8 @@ A list of all the commands I used to make this template can be found in `command
 
 To use a dabatase, look [here](https://github.com/IS-FixMi/fixmi-database-template).
 
+Tested on Archlinux, 6.7.6 linux kernel
+
 ## TODO
 - [x] Base project + Express
 - [x] Typescript and eslint
