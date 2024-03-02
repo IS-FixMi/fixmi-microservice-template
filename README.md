@@ -83,16 +83,21 @@ npm run production
 ## Project structure
 
 - `backend/`: everything backend
-- `public/`: all static data such as images and fonts
+  - `routes/`: folder containing a file for each route
+  - server.ts: the main server script 
+- `build/`: production app generate after `npm run startbuild`
+- `dist/`: needed for typescript 
+- `public/`: all static data needed to run the application
 - `src/`: source code 
   - `components/`: react's components 
+  - `assets/`: assets for frontend such as images
   - `index.tsx`: main react file
 
 A list of all the commands I used to make this template can be found in `commands/` 
 
 To use a dabatase, look [here](https://github.com/IS-FixMi/fixmi-database-template).
 
-Tested on Archlinux, 6.7.6 linux kernel
+Tested on Archlinux, linux kernel 6.7.6
 
 ## TODO
 - [x] Base project + Express
