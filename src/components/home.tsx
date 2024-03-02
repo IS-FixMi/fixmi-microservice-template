@@ -9,7 +9,10 @@ import React from "react"
 import { ErrorBoundary } from 'react-error-boundary'
 import '../style.css'
 import Navbar from './navbar'
+import Map from './map'
 import Loremipsum from './loremipsum'
+import Team from './team'
+import Footer from './footer'
 
 export default function Home() {
   
@@ -17,7 +20,13 @@ export default function Home() {
   return (
     <ErrorBoundary FallbackComponent={Fallback}>
       <Navbar />
-      <Loremipsum />
+      <ul className="space-y-30 py-36 px-10">
+        <Map />
+        <Loremipsum />
+        <Team />
+      </ul>
+
+      <Footer />
     </ErrorBoundary>
   );
 }
