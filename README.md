@@ -54,6 +54,8 @@ docker logs <CONTAINER_ID>
 
 ## Testing
 
+You need `npm` installed, then run `npm install` to Install required dependencies. If It asks to install more packages during the first build, just say yes.
+
 To run the backend 
 ```bash 
 npm run startback
