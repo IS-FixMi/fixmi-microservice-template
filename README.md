@@ -36,7 +36,7 @@ And then run the container, it will take some time the first time
 ```bash 
 docker run -dp 3001:3001 -p 3002:3002 example-microservice
 ```
-You can then connect to `localhost:3001` to access the backend and `localhost:3002` to connect to frontend 
+You can then connect to `localhost:3001` to access the backend and `localhost:3002` to connect to frontend. It will take a while (1 minute) to load the forntend.
 
 Stop the container 
 ```bash 
