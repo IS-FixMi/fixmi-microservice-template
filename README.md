@@ -37,7 +37,7 @@ docker run -dp <backend_port>:3001 -p <frontend_port>:3002 -v .:/app example-mic
 ```
 - `-d` runs in detach mode. If you want to debug you may want to not use this in order to see the output of the build process. Keep in mind that you will have to kill the process via docker rm.
 
-You can then connect to `localhost:3001` to access the backend and `localhost:3002` to connect to frontend. It will take a while (1 minute) to load the forntend.
+You can then connect to `localhost:<backend_port>` to access the backend and `localhost:<frontend_port>` to connect to frontend. It will take a while (1 minute) to load the forntend.
 
 Stop the container 
 ```bash 
