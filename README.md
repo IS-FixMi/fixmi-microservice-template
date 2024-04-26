@@ -18,8 +18,6 @@ Each microservice runs in a docker container, and uses:
 
 - [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss) for styles
 
-- [CORS](https://www.npmjs.com/package/cors) for safe Cross-origin resource sharing via a whitelist
-
 - [Docker](https://github.com/docker) for deployment
 
 Environmental variables such as ports are stored in `.env`
@@ -35,7 +33,7 @@ And then run the container
 ```bash 
 docker run -dp <backend_port>:3001 -p <frontend_port>:3002 -v .:/app example-microservice
 ```
-- `-d` runs in detach mode. If you want to debug you may want to not use this in order to see the output of the build process. Keep in mind that you will have to kill the process via docker rm.
+- `-d` runs in detach mode. If you want to debug you may want to not use this in order to see the output of the build process. Keep in mind that you will have to kill the process via docker stop.
 
 You can then connect to `localhost:<backend_port>` to access the backend and `localhost:<frontend_port>` to connect to frontend. It will take a while (1 minute) to load the forntend.
 
