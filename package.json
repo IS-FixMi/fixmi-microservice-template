@@ -8,7 +8,7 @@
     "buildfront": "PORT=$(cat .env | grep  REACT_APP_BACKEND_PORT= | cut -d\"=\" -f2)  npx react-scripts build",
     "startback": "nodemon backend/server.ts",
     "start": "concurrently \" npm run startback\" \" npm run startfront\" ",
-    "production": "concurrently \" npm run startback\" \" serve -l 3002 build\" ",
+    "production": "concurrently \" npm run startback\" \" serve -l 3002 -s build\" ",
     "lint": "eslint . --ext .ts"
   },
   "proxy": "",
