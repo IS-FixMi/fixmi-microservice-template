@@ -24,7 +24,7 @@ Each microservice runs in a docker container, and uses:
 
 Environmental variables such as ports are stored in `.env`
 
-## Docker
+# Docker
 
 To build the docker container run 
 ```bash 
@@ -52,6 +52,10 @@ docker logs <CONTAINER_ID>
 ```
 
 ---
+
+# Without docker
+
+You can read the following section to run the app outside of docker
 
 ## Testing
 
