@@ -32,25 +32,6 @@ app.use(function(req, res, next) {
   });
 
 
-// ---- CORS -----
-// Implementing a whitelist with CORS to secure that only 
-// certain addresses on a whitelit can access the api
-var cors = require('cors');
-
-var whitelist = [ 'http://localhost:3002' ]
-var corsOptions = {
-  origin: function (origin, callback) {
-    // Cheeck if the origin is in the whitelist or there is no origin (server-to-server)
-    if (whitelist.indexOf(origin) !== -1 || !origin) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  }
-}
-
-app.use(cors(corsOptions));
-
 // ------------------ ROUTES ------------------
 
 app.use("/api/greet", greetRouter);
