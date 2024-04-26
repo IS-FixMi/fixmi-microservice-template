@@ -28,14 +28,15 @@ Environmental variables such as ports are stored in `.env`
 
 To build the docker container run 
 ```bash 
-npm run buildfront 
 docker build -t example-microservice . 
 ```
 
-And then run the container, it will take some time the first time
+And then run the container
 ```bash 
-docker run -dp 3001:3001 -p 3002:3002 example-microservice
+docker run -dp <backend_port>:3001 -p <frontend_port>:3002 -v .:/app example-microservice
 ```
+- `-d` runs in detach mode. If you want to debug you may want to not use this in order to see the output of the build process. Keep in mind that you will have to kill the process via docker rm.
+
 You can then connect to `localhost:3001` to access the backend and `localhost:3002` to connect to frontend. It will take a while (1 minute) to load the forntend.
 
 Stop the container 
